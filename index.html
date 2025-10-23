@@ -59,7 +59,7 @@
 
         .image-box {
             width: 100%;
-            height: 70%;
+            height: 60%;
             background-color: #d1ffdc;
             border-radius: 10px;
             display: flex;
@@ -80,16 +80,18 @@
 
         .message-box {
             width: 100%;
-            height: 25%;
+            height: 35%;
             background-color: #b6ffc1;
             border-radius: 10px;
             padding: 15px;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            align-items: flex-start;
+            justify-content: flex-start;
             text-align: center;
             font-size: 16px;
             line-height: 1.4;
+            overflow-y: auto;
+            word-wrap: break-word;
         }
 
         .heart {
@@ -131,6 +133,25 @@
             color: #33d384;
         }
 
+        /* Custom scrollbar for message boxes */
+        .message-box::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .message-box::-webkit-scrollbar-track {
+            background: #d1ffdc;
+            border-radius: 10px;
+        }
+
+        .message-box::-webkit-scrollbar-thumb {
+            background: #69ffb4;
+            border-radius: 10px;
+        }
+
+        .message-box::-webkit-scrollbar-thumb:hover {
+            background: #33d384;
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 10px;
@@ -155,14 +176,15 @@
             <div class="gallery" id="gallery">
                 <div class="slide">
                     <div class="image-box">
-                        <img src="img1.jpeg" alt="Image 1">
+                        <img src="https://via.placeholder.com/300x300?text=Image+1" alt="Image 1">
                     </div>
                     <div class="message-box">
-                       Happy Happy birthday to our favourite mechatronic boy!!! Im so grateful for your presence in my life. I wish we had met sooner because you are extremely chill and an awesome human being, you make me proud to call you my friend. You mean so much to me, you are more than just a friend but also a brother i can depend on. I love you bro, heres to more years of friendship!!!!!!  -John               </div>
+                       Happy Happy birthday to our favourite mechatronic boy!!! Im so grateful for your presence in my life. I wish we had met sooner because you are extremely chill and an awesome human being, you make me proud to call you my friend. You mean so much to me, you are more than just a friend but also a brother i can depend on. I love you bro, heres to more years of friendship!!!!!!  -John
+                    </div>
                 </div>
                 <div class="slide">
                     <div class="image-box">
-                        <img src="img2.jpeg" alt="Image 2">
+                        <img src="https://via.placeholder.com/300x300?text=Image+2" alt="Image 2">
                     </div>
                     <div class="message-box">
                          Heyyyy olly happy bdayy 🤭🎉🥳 Im so glad to have met such an amazing and caring friend like you, you have been such a big blessing in all our lives ❤️❤️🥳🥳🥳  -kareem
@@ -170,10 +192,10 @@
                 </div>
                 <div class="slide">
                     <div class="image-box">
-                       <img src="img3.jpeg" alt="Image 3">
+                       <img src="https://via.placeholder.com/300x300?text=Image+3" alt="Image 3">
                     </div>
                     <div class="message-box">
-                       Happy birthday Ollie! 🎉🎊it’s been so fun getting to know u the last year 💖 can’t wait for more tea fueled study sessions and lots more chats this year 🤭 hope u have the best best day and we can celebrate when I get back from Germany ☺️ love uuu -Gabi
+                       Happy birthday Ollie! 🎉🎊it's been so fun getting to know u the last year 💖 can't wait for more tea fueled study sessions and lots more chats this year 🤭 hope u have the best best day and we can celebrate when I get back from Germany ☺️ love uuu -Gabi
                     </div>
                 </div>
             </div>
@@ -216,7 +238,7 @@
                 
                 // Create heart image - using your heart.png file
                 const heartImg = document.createElement('img');
-                heartImg.src = 'heart.png';
+                heartImg.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjNjlmZmI0IiBkPSJNNDcyLjcgMTUwLjdjMjEuOS0yMS45IDIxLjktNTcuMyAwLTc5LjJMMzYwLjcgMzguOGMtMjEuOS0yMS45LTU3LjMtMjEuOS03OS4yIDBMMjU2IDY0LjVMMjMwLjUgMzguOGMtMjEuOS0yMS45LTU3LjMtMjEuOS03OS4yIDBMMzkuMyA3MS41Yy0yMS45IDIxLjktMjEuOSA1Ny4zIDAgNzkuMmw3OS4yIDc5LjIgMTEzLjUgMTEzLjVjOS40IDkuNCAyMS43IDE0LjEgMzMuOSAxNC4xczI0LjUtNC43IDMzLjktMTQuMWwxMTMuNS0xMTMuNSA3OS4yLTc5LjJ6Ii8+PC9zdmc+';
                 heartImg.alt = 'Floating heart';
                 heart.appendChild(heartImg);
                 
@@ -355,4 +377,3 @@
     </script>
 </body>
 </html>
-
