@@ -33,11 +33,13 @@
         .gallery-container {
             position: relative;
             width: 100%;
-            height: 60vh;
             overflow: hidden;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             background-color: #fff;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .gallery {
@@ -49,17 +51,15 @@
 
         .slide {
             width: 33.33%;
-            height: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             padding: 20px;
         }
 
         .image-box {
             width: 100%;
-            height: 60%;
+            max-height: 50%;
             background-color: #d1ffdc;
             border-radius: 10px;
             display: flex;
@@ -68,6 +68,7 @@
             margin-bottom: 15px;
             position: relative;
             overflow: hidden;
+            flex-shrink: 0;
         }
 
         .image-box img,
@@ -80,18 +81,17 @@
 
         .message-box {
             width: 100%;
-            height: 35%;
             background-color: #b6ffc1;
             border-radius: 10px;
             padding: 15px;
-            display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
             text-align: center;
             font-size: 16px;
             line-height: 1.4;
-            overflow-y: auto;
             word-wrap: break-word;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .heart {
@@ -133,32 +133,9 @@
             color: #33d384;
         }
 
-        /* Custom scrollbar for message boxes */
-        .message-box::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        .message-box::-webkit-scrollbar-track {
-            background: #d1ffdc;
-            border-radius: 10px;
-        }
-
-        .message-box::-webkit-scrollbar-thumb {
-            background: #69ffb4;
-            border-radius: 10px;
-        }
-
-        .message-box::-webkit-scrollbar-thumb:hover {
-            background: #33d384;
-        }
-
         @media (max-width: 768px) {
             .container {
                 padding: 10px;
-            }
-            
-            .gallery-container {
-                height: 50vh;
             }
             
             .message-box {
@@ -176,7 +153,7 @@
             <div class="gallery" id="gallery">
                 <div class="slide">
                     <div class="image-box">
-                        <img src="img1.jpeg" alt="Image 1">
+                        <img src="https://via.placeholder.com/300x200?text=Image+1" alt="Image 1">
                     </div>
                     <div class="message-box">
                        Happy Happy birthday to our favourite mechatronic boy!!! Im so grateful for your presence in my life. I wish we had met sooner because you are extremely chill and an awesome human being, you make me proud to call you my friend. You mean so much to me, you are more than just a friend but also a brother i can depend on. I love you bro, heres to more years of friendship!!!!!!  -John
@@ -184,7 +161,7 @@
                 </div>
                 <div class="slide">
                     <div class="image-box">
-                        <img src="img2.jpeg" alt="Image 2">
+                        <img src="https://via.placeholder.com/300x200?text=Image+2" alt="Image 2">
                     </div>
                     <div class="message-box">
                          Heyyyy olly happy bdayy 🤭🎉🥳 Im so glad to have met such an amazing and caring friend like you, you have been such a big blessing in all our lives ❤️❤️🥳🥳🥳  -kareem
@@ -192,7 +169,7 @@
                 </div>
                 <div class="slide">
                     <div class="image-box">
-                       <img src="img3.jpeg" alt="Image 3">
+                       <img src="https://via.placeholder.com/300x200?text=Image+3" alt="Image 3">
                     </div>
                     <div class="message-box">
                        Happy birthday Ollie! 🎉🎊it's been so fun getting to know u the last year 💖 can't wait for more tea fueled study sessions and lots more chats this year 🤭 hope u have the best best day and we can celebrate when I get back from Germany ☺️ love uuu -Gabi
@@ -377,4 +354,3 @@
     </script>
 </body>
 </html>
-
